@@ -28,4 +28,12 @@ export class FormularioContatoComponent {
         observacoes: new FormControl('')
       });
     }
+
+    salvarContato(){
+      console.log(this.contatoForm.value)
+    }
+
+    cancelar(){
+      console.log('Operacao cancelada')
+    }
 }

@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 import agenda from './agenda.json';
 import { FormularioContatoComponent } from '../formulario-contato/formulario-contato.component';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterOutlet } from '@angular/router';
 import { ContainerComponent } from '../../componentes/container/container.component';
 import { CabecalhoComponent } from '../../componentes/cabecalho/cabecalho.component';
 import { FormsModule } from '@angular/forms';
@@ -27,7 +27,8 @@ interface Contato{
     SeparadorComponent,
     ContatoComponent,
     FormsModule,
-    FormularioContatoComponent],
+    FormularioContatoComponent,
+    RouterLink],
   templateUrl: './lista-contatos.component.html',
   styleUrl: './lista-contatos.component.css'
 })

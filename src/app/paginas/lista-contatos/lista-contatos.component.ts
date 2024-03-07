@@ -40,6 +40,7 @@ export class ListaContatosComponent implements OnInit{
 
   filtroPorTexto: string = ''
 
+  
   constructor(private contatoService : ContatoService){
     this.contatos = this.contatoService.obterContatos();
   }

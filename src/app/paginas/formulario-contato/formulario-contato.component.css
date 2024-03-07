@@ -1,4 +1,4 @@
-header .cabecalho-link {
+  header .cabecalho-link {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -162,5 +162,12 @@ header .cabecalho-link {
     font-size: 16px;
     color: red;
     margin-bottom: 12px;
+  }
+
+  header .cabecalho-link button {
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    background: none;
   }
   

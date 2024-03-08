@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { ContainerComponent } from '../../componentes/container/container.component';
 import { SeparadorComponent } from '../../componentes/separador/separador.component';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { ContatoService } from '../../services/contato.service';
 
 @Component({
@@ -19,7 +19,9 @@ import { ContatoService } from '../../services/contato.service';
 })
 export class FormularioContatoComponent implements OnInit{
 
-  constructor(private contatoService: ContatoService){
+  constructor(
+    private contatoService: ContatoService,
+    private router: Router){
 
   }
 
@@ -43,6 +45,8 @@ export class FormularioContatoComponent implements OnInit{
     salvarContato(){
       const novoContato = this.contatoForm.value;
       this.contatoService.salvarContato(novoContato);
+      this.contatoForm.reset();
+      this.router.navigateByUrl('/lista-contatos')
     }
 
     cancelar(){

@@ -1,10 +1,5 @@
 import { Injectable } from '@angular/core';
-
-interface Contato{
-  id: number
-  nome: string
-  telefone : string
-}
+import { Contato } from '../componentes/contato/contato';
 
 @Injectable({
   providedIn: 'root'
@@ -13,15 +8,13 @@ interface Contato{
 export class ContatoService {
 
   private contatos: Contato[]=[
-    {"id": 1, "nome": "Ana", "telefone": "29 278869420"},
-    {"id": 2, "nome": "Antônio", "telefone": "38 128451235"},
-    {"id": 2, "nome": "Ágata", "telefone": "38 128451235"},
-    {"id": 3, "nome": "Bruno", "telefone": "95 695521583"},
-    {"id": 4, "nome": "Beatriz", "telefone": "25 854986459"},
-    {"id": 5, "nome": "Carlos", "telefone": "94 543197849"},
-    {"id": 6, "nome": "Cláudia", "telefone": "31 176437098"},
-    {"id": 7, "nome": "Daniel", "telefone": "56 613692441"},
-    {"id": 8, "nome": "Diana", "telefone": "16 670764734"}
+    {"id": 1, "nome": "Ana", "telefone": "29 278869420", "email" :"ana@email.com"},
+    {"id": 2, "nome": "Antônio", "telefone": "38 128451235", "email" :"antonio@email.com"},
+    {"id": 3, "nome": "Bruno", "telefone": "95 695521583", "email" :"bruno@email.com"},
+    {"id": 4, "nome": "Beatriz", "telefone": "25 854986459", "email" :"beatriz@email.com"},
+    {"id": 5, "nome": "Carlos", "telefone": "94 543197849", "email" :"carlos@email.com"},
+    {"id": 6, "nome": "Cláudia", "telefone": "31 176437098", "email" :"claudia@email.com"},
+    {"id": 7, "nome": "Daniel", "telefone": "56 613692441", "email" :"daniel@email.com"}
   ] 
 
   constructor() {

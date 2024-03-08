@@ -8,13 +8,7 @@ import { FormsModule } from '@angular/forms';
 import { ContatoComponent } from '../../componentes/contato/contato.component';
 import { SeparadorComponent } from '../../componentes/separador/separador.component';
 import { ContatoService } from '../../services/contato.service';
-
-interface Contato{
-  id: number
-  nome: string
-  telefone : string
-}
-
+import { Contato } from '../../componentes/contato/contato';
 
 @Component({
   selector: 'app-lista-contatos',
@@ -31,16 +25,14 @@ interface Contato{
   templateUrl: './lista-contatos.component.html',
   styleUrl: './lista-contatos.component.css'
 })
-
-
 export class ListaContatosComponent implements OnInit{
 
   alfabeto = 'abcdefghijklmnopqrstuvwxyz';
-  contatos: Contato[];
+  contatos: Contato[] = [];
 
   filtroPorTexto: string = ''
 
-  
+
   constructor(private contatoService : ContatoService){
     this.contatos = this.contatoService.obterContatos();
   }
